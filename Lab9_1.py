@@ -26,7 +26,7 @@ try:
 
         print("Країни з більшим GDP за", ind, ":")
 
-        with open("new_lab8.csv", "w", newline="", encoding="utf-8") as csvopen2:
+        with open("new_lab9.csv", "w", newline="") as csvopen2:
             writer = csv.writer(csvopen2, delimiter=",")
             writer.writerow(["Country Name", "2016 [YR2016]"])  # заголовок
 
