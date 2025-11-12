@@ -1,19 +1,23 @@
 import json
-countries = {
-    "Ukraine": {"area": 714000, "population": 33000000, "capital": "Kyiv", "continent": "Europe"},
-    "USA": {"area": 2114000, "population": 233000000, "capital": "Washington", "continent": "North America"},
-    "Slovakia": {"area": 344000, "population": 13000000, "capital": "Bratislava", "continent": "Europe"},
-    "Germany": {"area": 540000, "population": 78000000, "capital": "Berlin", "continent": "Europe"},
-    "France": {"area": 657800, "population": 92000000, "capital": "Paris", "continent": "Europe"},
-    "Denmark": {"area": 213240, "population": 8500000, "capital": "Copenhagen", "continent": "Europe"},
-    "Sweden": {"area": 4570000, "population": 23580000, "capital": "Stockholm", "continent": "Europe"},
-    "Bulgaria": {"area": 234000, "population": 7849000, "capital": "Sofia", "continent": "Europe"},
-    "Estonia": {"area": 145000, "population": 4500000, "capital": "Tallinn", "continent": "Europe"},
-    "Spain": {"area": 475000, "population": 62500000, "capital": "Madrid", "continent": "Europe"},
-}
-with open("data.json", "w") as file:
-    json.dump(countries, file, ensure_ascii=False, indent=4)
+import os
 
+# створення файлу тільки якщо його ще немає
+if not os.path.exists("data.json"):
+    countries = {
+        "Ukraine": {"area": 714000, "population": 33000000, "capital": "Kyiv", "continent": "Europe"},
+        "USA": {"area": 2114000, "population": 233000000, "capital": "Washington", "continent": "North America"},
+        "Slovakia": {"area": 344000, "population": 13000000, "capital": "Bratislava", "continent": "Europe"},
+        "Germany": {"area": 540000, "population": 78000000, "capital": "Berlin", "continent": "Europe"},
+        "France": {"area": 657800, "population": 92000000, "capital": "Paris", "continent": "Europe"},
+        "Denmark": {"area": 213240, "population": 8500000, "capital": "Copenhagen", "continent": "Europe"},
+        "Sweden": {"area": 4570000, "population": 23580000, "capital": "Stockholm", "continent": "Europe"},
+        "Bulgaria": {"area": 234000, "population": 7849000, "capital": "Sofia", "continent": "Europe"},
+        "Estonia": {"area": 145000, "population": 4500000, "capital": "Tallinn", "continent": "Europe"},
+        "Spain": {"area": 475000, "population": 62500000, "capital": "Madrid", "continent": "Europe"},
+    }
+    with open("data.json", "w") as file:
+        json.dump(countries, file, ensure_ascii=False, indent=4)
+countries = {}
 
 def print_countries():
     with open("data.json", "r") as file:

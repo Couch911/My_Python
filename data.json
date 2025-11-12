@@ -1,10 +1,4 @@
 {
-    "Ukraine": {
-        "area": 714000,
-        "population": 33000000,
-        "capital": "Kyiv",
-        "continent": "Europe"
-    },
     "USA": {
         "area": 2114000,
         "population": 233000000,
@@ -58,5 +52,17 @@
         "population": 62500000,
         "capital": "Madrid",
         "continent": "Europe"
+    },
+    "Africa": {
+        "area": 123454545,
+        "population": 23523525,
+        "capital": "Capital",
+        "continent": "Africa"
+    },
+    "Asia": {
+        "area": 12352352,
+        "population": 235235235,
+        "capital": "Capital",
+        "continent": "Asia"
     }
 }
