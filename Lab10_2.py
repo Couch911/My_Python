@@ -2,7 +2,13 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('Data2.csv')
+filename = "Data2.csv"
+try:
+    df = pd.read_csv(filename)
+except FileNotFoundError:
+    print(f"Файл {filename} не існує")
+    exit()
+
 df.columns = df.columns.str.strip()
 for col in df.columns:
     if "[YR" in col:
